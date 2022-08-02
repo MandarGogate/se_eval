@@ -57,9 +57,8 @@ if __name__ == '__main__':
             if metric not in metrics_data:
                 metrics_data[metric] = []
             metrics_data[metric].append(mean_scores[metric])
-
-            df = pd.DataFrame(metrics_data)
-            print(tabulate(df, tablefmt="pipe", headers="keys"), "\n")
+        df = pd.DataFrame(metrics_data)
+        print(tabulate(df, tablefmt="pipe", headers="keys"), "\n")
 
     if args.latex:
         df = pd.DataFrame(metrics_data, index=metrics_data["Exp"])
