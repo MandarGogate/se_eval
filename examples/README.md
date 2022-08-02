@@ -1,0 +1,4 @@
+## Usage
+```
+python test.py 
+```
